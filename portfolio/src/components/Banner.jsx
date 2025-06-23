@@ -57,7 +57,7 @@ const Banner = () => {
                     <img
                         src={bannerImage}
                         alt="Uday Shastrakar"
-                        className="rounded-full w-60 h-60 md:w-72 md:h-72 shadow-lg object-cover"
+                        className="rounded-full w-60 h-60 md:w-80 md:h-80 shadow-lg object-cover"
                     />
                 </div>
             </div>
