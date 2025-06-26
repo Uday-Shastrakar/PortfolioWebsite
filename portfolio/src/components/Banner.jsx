@@ -63,21 +63,27 @@ const Banner = () => {
           {/* Social Icons */}
           <div className="flex justify-center md:justify-start space-x-4 mt-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/uday-shastrakar"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="hover:bg-orange-500 cursor-pointer rounded-full w-12 h-12 flex justify-center items-center bg-gray-700 transition"
             >
               <i className="fa-brands fa-linkedin text-2xl"></i>
             </a>
             <a
-              href="#"
+              href="https://github.com/Uday-Shastrakar"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
               className="hover:bg-orange-500 cursor-pointer rounded-full w-12 h-12 flex justify-center items-center bg-gray-700 transition"
             >
               <i className="fa-brands fa-github text-2xl"></i>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="hover:bg-orange-500 cursor-pointer rounded-full w-12 h-12 flex justify-center items-center bg-gray-700 transition"
             >
