@@ -36,12 +36,9 @@ const Banner = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-full min-h-screen flex items-center text-white px-4 md:px-10 py-16"
+      className="text-white w-full px-4 md:px-10 py-16 min-h-screen flex items-center"
     >
-      {/* Optional dark overlay for readability */}
-      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="space-y-4 text-center md:text-left">
           <h3 className="text-2xl md:text-3xl font-semibold">Hi, I am</h3>
