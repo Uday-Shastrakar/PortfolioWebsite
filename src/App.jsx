@@ -1,5 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// ... your imports
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Banner from "./components/Banner";
+import About from "./components/About";
+import Services from "./components/Services";
+import Expertise from "./components/Expertise";
+
+import AboutPage from "./pages/AboutPage";
+import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Licensing from "./pages/Licensing";
+import Skills from "./pages/Skills";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -10,7 +22,7 @@ function App() {
           path="/"
           element={
             <>
-              <Banner />
+              <Banner/>
               <About />
               <Services />
               <Expertise />
