@@ -1,22 +1,23 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; 
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom"; // ✅ Important
 
 const Header = () => {
-  const [brandName, setBrandName] = useState("Uday Shastrakar");
+  const [brandName] = useState("Uday Shastrakar");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const [menuLinks, setMenuLinks] = useState([
+  const menuLinks = [
     { title: "Home", link: "/", id: 1 },
     { title: "About", link: "/about", id: 2 },
     { title: "Skills", link: "/skills", id: 3 },
     { title: "Portfolio", link: "/portfolio", id: 4 },
     { title: "Contact", link: "/contact", id: 5 },
-  ]);
+  ];
 
-  const [actionButton, setActionButton] = useState({
+  const actionButton = {
     title: "Download CV",
     link: "https://rxresu.me/uday.shastrakar/uday-shastrakar-java-profile",
-  });
+  };
 
   return (
     <header className="bg-gray-100 w-full fixed top-0 z-50 shadow">
@@ -29,16 +30,18 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 items-center">
           {menuLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.link}
+              to={link.link}
               className="hover:text-orange-500 font-medium"
             >
               {link.title}
-            </a>
+            </Link>
           ))}
           <a
             href={actionButton.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 bg-orange-500 text-white shadow rounded-full text-sm font-semibold hover:bg-orange-600 transition"
           >
             {actionButton.title}
@@ -60,17 +63,19 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden px-6 pb-4 space-y-3 bg-gray-100">
           {menuLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.link}
+              to={link.link}
               className="block hover:text-orange-500 text-base font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.title}
-            </a>
+            </Link>
           ))}
           <a
             href={actionButton.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block mt-2 px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-semibold hover:bg-orange-600 transition"
             onClick={() => setIsMobileMenuOpen(false)}
           >
