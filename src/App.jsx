@@ -15,29 +15,37 @@ import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
-    <Router basename="/PortfolioWebsite"> {/* Add basename here */}
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Banner/>
-              <About />
-              <Services />
-              <Expertise />
-            </>
-          }
-        />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/licensing" element={<Licensing />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="flex flex-col min-h-screen"> {/* Layout wrapper for sticky footer */}
+      <Router basename="/PortfolioWebsite">
+        <Header />
+        
+        {/* Main content grows to fill remaining space */}
+        <main className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Banner />
+                  <About />
+                  <Services />
+                  <Expertise />
+                </>
+              }
+            />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/licensing" element={<Licensing />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+        </main>
+
+        {/* Footer always sticks to bottom */}
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
