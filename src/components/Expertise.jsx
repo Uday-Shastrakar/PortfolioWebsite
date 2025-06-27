@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'; // ✅ import Link
 import bannerBackground from '../assets/banner_wallpaper.svg';
 
 const Expertise = () => {
@@ -13,7 +14,6 @@ const Expertise = () => {
         style={{
           backgroundImage: `url(${bannerBackground})`,
           backgroundSize: 'cover',
-        
         }}
       >
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
@@ -26,12 +26,14 @@ const Expertise = () => {
                 I also build beautiful, responsive frontends using React, Tailwind CSS & AngularJS.
                 Skilled in Docker, MySQL, Jenkins, Kafka, and AWS Cloud.
               </p>
-              <a
-                href="/contact"
+
+              {/* ✅ Changed from <a> to <Link> */}
+              <Link
+                to="/contact"
                 className="inline-block bg-orange-500 px-5 py-2 text-lg rounded-full shadow hover:bg-orange-600 transition"
               >
                 Hire Me
-              </a>
+              </Link>
             </div>
           </div>
 

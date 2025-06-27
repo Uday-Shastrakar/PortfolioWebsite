@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom"; // ✅ Import Link from react-router-dom
 import Typed from "typed.js";
 import bannerImage from "../assets/uday.jpeg";
 import bannerBackground from "../assets/banner_wallpaper.svg";
@@ -91,14 +92,14 @@ const Banner = () => {
             </a>
           </div>
 
-          {/* Contact Button */}
+          {/* Contact Button - ✅ uses Link now */}
           <div className="mt-6">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block text-lg px-6 py-2 bg-orange-500 rounded-full shadow-lg hover:bg-orange-600 transition"
             >
               Contact Me
-            </a>
+            </Link>
           </div>
         </div>
 

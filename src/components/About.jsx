@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; // ✅ import Link
 import bannerImage from '../assets/uday2.png';
 
 const About = () => {
@@ -31,12 +32,14 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-semibold">{data.title}</h2>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">{data.desc1}</p>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">{data.desc2}</p>
-          <a
-            href={data.actionButton.link}
+
+          {/* ✅ Changed from <a> to <Link> */}
+          <Link
+            to={data.actionButton.link}
             className="inline-block bg-orange-500 text-white px-5 py-2 text-lg rounded-full shadow hover:bg-orange-600 transition"
           >
             {data.actionButton.title}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
