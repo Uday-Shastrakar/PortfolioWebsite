@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
-import bannerImage from "../assets/uday.jpeg";
+import bannerImage from "../assets/uday3.jpg";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 
 const Banner = () => {
@@ -109,7 +109,7 @@ const Banner = () => {
           <img
             src={bannerImage}
             alt="Uday Shastrakar"
-            className="rounded-full w-52 h-52 md:w-80 md:h-80 object-cover shadow-lg"
+            className="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover shadow-lg"
           />
         </div>
       </div>
