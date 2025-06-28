@@ -36,7 +36,7 @@ const Banner = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="text-white w-full px-4 md:px-10 pt-32 md:pt-16 pb-16 min-h-screen flex items-center"
+      className="text-white w-full px-4 md:px-10 pt-20 md:pt-28 pb-16 min-h-screen flex items-center"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
         {/* Left Content with limited overlay */}

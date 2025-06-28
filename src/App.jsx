@@ -12,6 +12,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Licensing from "./pages/Licensing";
 import Skills from "./pages/Skills";
 import Portfolio from "./pages/Portfolio";
+import Experience from "./components/Experiance";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <>
                   <Banner />
                   <About />
+                  <Experience/>
                   <Services />
                   <Expertise />
                 </>
