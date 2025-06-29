@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom'; // ✅ import Link
-import bannerBackground from '../assets/banner_wallpaper.svg';
+import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa"; // Import icon
+import bannerBackground from "../assets/banner_wallpaper.svg";
+import resumePDF from "../assets/resume.pdf";
 
 const Expertise = () => {
   return (
@@ -8,12 +10,13 @@ const Expertise = () => {
         My Expertise
       </h1>
 
-      {/* Section with background */}
+      {/* Section with background image */}
       <div
         className="py-12 px-4 text-white"
         style={{
           backgroundImage: `url(${bannerBackground})`,
-          backgroundSize: 'cover',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
@@ -27,13 +30,25 @@ const Expertise = () => {
                 Skilled in Docker, MySQL, Jenkins, Kafka, and AWS Cloud.
               </p>
 
-              {/* ✅ Changed from <a> to <Link> */}
-              <Link
-                to="/contact"
-                className="inline-block bg-orange-500 px-5 py-2 text-lg rounded-full shadow hover:bg-orange-600 transition"
-              >
-                Hire Me
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 justify-center lg:justify-start">
+                {/* Hire Me Button */}
+                <Link
+                  to="/contact"
+                  className="inline-block bg-orange-500 px-5 py-2 text-lg rounded-full shadow hover:bg-orange-600 transition"
+                >
+                  Hire Me
+                </Link>
+
+                {/* Download Resume Button with icon */}
+                <a
+                  href={resumePDF}
+                  download="Uday_Shastrakar_Resume.pdf"
+                  className="inline-flex items-center justify-center bg-gray-100 text-gray-800 px-5 py-2 text-lg rounded-full shadow hover:bg-gray-300 transition"
+                  aria-label="Download Resume"
+                >
+                  Resume <FaDownload className="text-xl ml-2" />
+                </a>
+              </div>
             </div>
           </div>
 
