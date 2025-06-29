@@ -13,6 +13,7 @@ import Licensing from "./pages/Licensing";
 import Skills from "./pages/Skills";
 import Portfolio from "./pages/Portfolio";
 import Experience from "./components/Experiance";
+import ServiceDetail from "./pages/ServiceDetail";
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
             <Route path="/licensing" element={<Licensing />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:id" element={<ServiceDetail />} />
           </Routes>
         </main>
 
