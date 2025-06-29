@@ -6,6 +6,7 @@ import {
   FaDocker,
   FaJenkins,
   FaGitAlt,
+  FaDatabase,
 } from "react-icons/fa";
 import {
   SiKotlin,
@@ -24,6 +25,8 @@ import {
   SiConfluence,
   SiJira,
   SiLinux,
+  SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
 
 const skillCategories = {
@@ -51,17 +54,20 @@ const skillCategories = {
     { name: "HTML/CSS" }, // No icons needed
   ],
   "Web & Messaging": [
-    { name: "RESTful APIs" }, // Descriptive only
+    { name: "RESTful APIs" },
     { name: "Microservices Architecture" },
     { name: "Kafka", icon: <SiApachekafka /> },
     { name: "RabbitMQ", icon: <SiRabbitmq /> },
   ],
   "Database & DevOps": [
     { name: "MySQL", icon: <SiMysql /> },
-    { name: "Liquibase" }, // No icon
-    { name: "Flyway" }, // No icon
+    { name: "PostgreSQL", icon: <SiPostgresql /> },
+    { name: "MSSQL", icon: <FaDatabase /> }, // Fallback icon
+    { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "Liquibase" },
+    { name: "Flyway" },
     { name: "Docker", icon: <FaDocker /> },
-    { name: "Kubernetes" }, // Add manually if needed
+    { name: "Kubernetes" },
     { name: "Jenkins", icon: <FaJenkins /> },
   ],
   "Testing & Docs": [
@@ -83,7 +89,9 @@ const skillCategories = {
 const Skills = () => {
   return (
     <div className="pt-28 pb-16 px-4 bg-white min-h-screen">
-      <h1 className="text-5xl font-bold text-center underline mb-10 text-gray-900">My Skills</h1>
+      <h1 className="text-5xl font-bold text-center underline mb-10 text-gray-900">
+        My Skills
+      </h1>
       <div className="max-w-6xl mx-auto space-y-12">
         {Object.entries(skillCategories).map(([category, skills]) => (
           <div key={category}>
