@@ -19,7 +19,7 @@ const Experience = () => {
             <li>Followed clean code principles and peer-reviewed code regularly.</li>
           </ul>
           <p className="mt-4 text-sm text-gray-700">
-            <strong>Tech Stack:</strong> Java, Kotlin, Spring Boot, MySQL, Liquibase, Flyway, JUnit, Docker, Jenkins, Bitbucket, Jira, Confluence, Postman, Vue.js, AWS, JavaMail
+            <strong>Tech Stack:</strong> Java, Kotlin, Spring Boot,JPA, MySQL, Liquibase, Flyway, JUnit, Docker, Jenkins, Bitbucket, Jira, Confluence, Postman, Vue.js, AWS, JavaMail
           </p>
         </div>
 
@@ -34,7 +34,7 @@ const Experience = () => {
             <li>Tested REST endpoints and integrated backend with frontend features.</li>
           </ul>
           <p className="mt-4 text-sm text-gray-700">
-            <strong>Tech Stack:</strong> Java, Spring Boot, Hibernate, MySQL, SQL, ExtJS
+            <strong>Tech Stack:</strong> Java, Spring Boot, Hibernate, MSSQL, SQL, ExtJS
           </p>
         </div>
       </div>
