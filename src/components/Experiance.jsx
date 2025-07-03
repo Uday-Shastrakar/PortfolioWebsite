@@ -34,7 +34,7 @@ const Experience = () => {
             <li>Tested REST endpoints and integrated backend with frontend features.</li>
           </ul>
           <p className="mt-4 text-sm text-gray-700">
-            <strong>Tech Stack:</strong> Java, Spring Boot, Hibernate, MsSQL, SQL, ExtJS
+            <strong>Tech Stack:</strong> Java, Spring Boot, Hibernate, MsSQL, SQL, ExtJS,SVN
           </p>
         </div>
       </div>
