@@ -14,6 +14,7 @@ const skillCategories = {
     { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
     { name: "Vue.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
     { name: "AngularJS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" },
+    { name: "ExtJS", src: "https://www.sencha.com/wp-content/uploads/2023/07/hero-center-img.svg" },
     { name: "Tailwind CSS", src: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg" },
   ],
   "Databases": [
@@ -32,6 +33,7 @@ const skillCategories = {
     { name: "Swagger", src: "https://icon.icepanel.io/Technology/svg/Swagger.svg" },
     { name: "JUnit", src: "https://icon.icepanel.io/Technology/svg/JUnit.svg" },
     { name: "Cucumber", src: "https://icon.icepanel.io/Technology/svg/Cucumber.svg" },
+    { name: "Portainer", src: "https://icon.icepanel.io/Technology/svg/Portainer.svg" }
   ],
   "Architecture & Messaging": [
     { name: "Kafka", src: "https://icon.icepanel.io/Technology/svg/Apache-Kafka.svg" },
@@ -44,6 +46,7 @@ const skillCategories = {
     { name: "Confluence", src: "https://icon.icepanel.io/Technology/svg/Confluence.svg" },
     { name: "Linux", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
     { name: "Windows", src: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" },
+    { name: "iOS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg" }
   ],
 };
 
