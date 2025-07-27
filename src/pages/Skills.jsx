@@ -10,37 +10,44 @@ const skillCategories = {
   ],
   "Frameworks & Libraries": [
     { name: "Spring Boot", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
+    { name: "Spring Security", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
     { name: "Hibernate", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-plain.svg" },
     { name: "Django", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" },
     { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
     { name: "Vue.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
     { name: "AngularJS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" },
     { name: "ExtJS", src: "https://www.sencha.com/wp-content/uploads/2023/07/hero-center-img.svg" },
-    { name: "Tailwind CSS", src: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg" },
+    { name: "Tailwind CSS", src: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg" }
   ],
   "Databases": [
     { name: "MySQL", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
     { name: "PostgreSQL", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
     { name: "MSSQL", src: "https://icon.icepanel.io/Technology/svg/Microsoft-SQL-Server.svg" },
-    { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+    { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" }
   ],
   "DevOps & Tools": [
     { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
     { name: "Kubernetes", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" },
     { name: "Jenkins", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" },
+    { name: "Portainer", src: "https://icon.icepanel.io/Technology/svg/Portainer.svg" },
     { name: "Git", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
     { name: "Bitbucket", src: "https://cdn.prod.website-files.com/657639ebfb91510f45654149/67f6a2054d7c4a557e026a06_44_Bitbucket_logo_logos-512.png" },
     { name: "Postman", src: "https://icon.icepanel.io/Technology/svg/Postman.svg" },
     { name: "Swagger", src: "https://icon.icepanel.io/Technology/svg/Swagger.svg" },
     { name: "JUnit", src: "https://icon.icepanel.io/Technology/svg/JUnit.svg" },
-    { name: "Cucumber", src: "https://icon.icepanel.io/Technology/svg/Cucumber.svg" },
-    { name: "Portainer", src: "https://icon.icepanel.io/Technology/svg/Portainer.svg" }
+    { name: "Cucumber", src: "https://icon.icepanel.io/Technology/svg/Cucumber.svg" }
+  ],
+  "Security & Identity": [
+    { name: "Spring Security", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
+    { name: "OAuth 2.0", src: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Oauth_logo.svg" },
+    { name: "Keycloak", src: "https://img.icons8.com/?size=96&id=37PBwQwtRMDZ&format=png" },
+    { name: "JWT", src: "https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png" }
   ],
   "Architecture & Messaging": [
     { name: "Kafka", src: "https://icon.icepanel.io/Technology/svg/Apache-Kafka.svg" },
     { name: "RabbitMQ", src: "https://icon.icepanel.io/Technology/svg/RabbitMQ.svg" },
     { name: "REST APIs", src: "https://icon.icepanel.io/Technology/svg/OpenAPI.svg" },
-    { name: "Microservices", src: "https://code.kx.com/insights/1.3/microservices/img/microservice_icon.png" },
+    { name: "Microservices", src: "https://code.kx.com/insights/1.3/microservices/img/microservice_icon.png" }
   ],
   "Project & OS": [
     { name: "Jira", src: "https://icon.icepanel.io/Technology/svg/Jira.svg" },
@@ -48,7 +55,7 @@ const skillCategories = {
     { name: "Linux", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
     { name: "Windows", src: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" },
     { name: "iOS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg" }
-  ],
+  ]
 };
 
 const Skills = () => {
