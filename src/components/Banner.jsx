@@ -88,7 +88,7 @@ const Banner = () => {
                 <i className="fa-brands fa-github text-2xl"></i>
               </a>
               <a
-                href="https://www.instagram.com/uday.shastrakar/"
+                href="https://www.instagram.com/uday_shastrakar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
