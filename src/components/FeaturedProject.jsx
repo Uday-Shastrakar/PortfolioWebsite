@@ -39,14 +39,8 @@ const FeaturedProject = () => {
                 <img 
                   src="/assets/strikeiq-dashboard.png" 
                   alt="StrikeIQ Dashboard" 
-                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 shadow-2xl"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="text-center bg-black/40 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/5">
-                      <FaThLarge className="text-orange-500 text-4xl mx-auto mb-3" />
-                      <p className="text-slate-300 font-mono text-xs uppercase tracking-widest">Dashboard Preview</p>
-                   </div>
-                </div>
               </div>
             </div>
           </div>
