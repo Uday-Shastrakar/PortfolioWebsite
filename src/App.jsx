@@ -13,15 +13,16 @@ import Licensing from "./pages/Licensing";
 import Skills from "./pages/Skills";
 import Portfolio from "./pages/Portfolio";
 import Experience from "./components/Experience";
-import ServiceDetail from "./pages/ServiceDetail";
+import FeaturedProject from "./components/FeaturedProject";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./pages/Contact";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen"> {/* Layout wrapper for sticky footer */}
+    <div className="flex flex-col min-h-screen">
       <Router basename="/PortfolioWebsite">
         <Header />
         
-        {/* Main content grows to fill remaining space */}
         <main className="flex-grow">
           <Routes>
             <Route
@@ -29,25 +30,21 @@ function App() {
               element={
                 <>
                   <Banner />
-                  <About />
-                  <Experience/>
-                  <Services />
+                  <FeaturedProject />
+                  <ProjectsSection />
+                  <Experience />
                   <Expertise />
+                  <ContactSection />
                 </>
               }
             />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/licensing" element={<Licensing />} />
+            <Route path="/contact" element={<ContactSection />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/:id" element={<ServiceDetail />} />
           </Routes>
         </main>
 
-        {/* Footer always sticks to bottom */}
         <Footer />
       </Router>
     </div>

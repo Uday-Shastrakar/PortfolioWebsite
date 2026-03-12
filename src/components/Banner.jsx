@@ -57,38 +57,31 @@ const Banner = () => {
               <span className="font-bold text-white border-b-2 border-orange-500" ref={el}></span>
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-slate-400 max-w-xl mx-auto md:mx-0">
-              Building scalable backend systems and real-time applications. 
-              Specializing in cloud-native architectures and high-performance data processing.
+              Building scalable backend systems and real-time applications. <br />
+              <span className="text-orange-500 font-semibold italic mt-2 block">
+                Currently building StrikeIQ — a real-time options analytics platform.
+              </span>
             </p>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex justify-center md:justify-start gap-4">
-            {[
-              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/uday-shastrakar", color: "hover:bg-[#0077b5]" },
-              { icon: <FaGithub />, url: "https://github.com/Uday-Shastrakar", color: "hover:bg-[#333]" },
-              { icon: <FaInstagram />, url: "https://www.instagram.com/uday_shastrakar/", color: "hover:bg-[#e4405f]" },
-            ].map((social, i) => (
-              <a
-                key={i}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`w-12 h-12 flex justify-center items-center rounded-2xl glass transition-all duration-300 transform hover:-translate-y-2 text-2xl ${social.color}`}
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-
-          {/* Contact Button */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-6">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl font-bold shadow-xl shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all"
+          {/* Social and Contact Buttons */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+            <a 
+              href="https://github.com/Uday-Shastrakar" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-3 glass rounded-2xl flex items-center gap-2 hover:border-orange-500/50 transition-all font-bold"
             >
-              Get In Touch
-            </Link>
+              <FaGithub size={20} /> GitHub
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/uday-shastrakar" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl flex items-center gap-2 shadow-lg shadow-orange-500/20 hover:scale-105 transition-all"
+            >
+              <FaLinkedin size={20} /> LinkedIn
+            </a>
           </div>
         </div>
 

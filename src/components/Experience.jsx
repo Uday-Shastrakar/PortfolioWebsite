@@ -21,13 +21,14 @@ const Experience = () => {
               </span>
             </div>
             
+            <p className="text-slate-300 mb-6 italic">Worked on backend services for a healthcare survey data collection platform used in research studies.</p>
+
             <ul className="space-y-3 text-slate-400 mb-8 list-none">
               {[
-                "Developed REST APIs using Spring Boot for healthcare survey data collection.",
-                "Designed and optimized database schemas in MySQL and MongoDB.",
-                "Implemented complex backend services for high-performance data processing.",
-                "Streamlined development workflows with Docker and Jenkins CI/CD pipelines.",
-                "Collaborated in an agile environment to deliver research-study platform features."
+                "Developed REST APIs using Spring Boot",
+                "Designed database schemas using MySQL and MongoDB",
+                "Implemented backend services for data processing",
+                "Worked with Docker and Jenkins for CI/CD"
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-orange-500 mt-1.5">•</span>
@@ -36,8 +37,7 @@ const Experience = () => {
               ))}
             </ul>
 
-            <div className="pt-6 border-t border-white/5">
-              <p className="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wider">Tech Stack</p>
+            <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="flex flex-wrap gap-2">
                 {["Java", "Spring Boot", "MySQL", "MongoDB", "Docker", "Jenkins"].map((tech) => (
                   <span key={tech} className="px-3 py-1 glass-dark rounded-lg text-xs text-slate-400">
@@ -45,6 +45,9 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
+              <p className="text-[10px] uppercase tracking-widest text-slate-600 bg-black/20 px-3 py-1 rounded-full border border-white/5">
+                Note: Source code cannot be shared due to company confidentiality
+              </p>
             </div>
           </div>
 
