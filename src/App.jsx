@@ -18,9 +18,11 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./pages/Contact";
 
 function App() {
+  const basename = import.meta.env.DEV ? "/" : "/PortfolioWebsite";
+
   return (
     <div className="flex flex-col min-h-screen">
-      <Router basename="/PortfolioWebsite">
+      <Router basename={basename}>
         <Header />
         
         <main className="flex-grow">

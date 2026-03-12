@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFileDownload, FaEye } from "react-icons/fa";
 import bannerImage from "../assets/uday3.jpg";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 
@@ -70,17 +70,32 @@ const Banner = () => {
               href="https://github.com/Uday-Shastrakar" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-3 glass rounded-2xl flex items-center gap-2 hover:border-orange-500/50 transition-all font-bold"
+              className="px-6 py-3 glass rounded-2xl flex items-center gap-2 hover:border-orange-500/50 transition-all font-bold text-sm"
             >
-              <FaGithub size={20} /> GitHub
+              <FaGithub size={18} /> GitHub
             </a>
             <a 
               href="https://www.linkedin.com/in/uday-shastrakar" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl flex items-center gap-2 shadow-lg shadow-orange-500/20 hover:scale-105 transition-all"
+              className="px-6 py-3 glass rounded-2xl flex items-center gap-2 hover:border-orange-500/50 transition-all font-bold text-sm"
             >
-              <FaLinkedin size={20} /> LinkedIn
+              <FaLinkedin size={18} /> LinkedIn
+            </a>
+            <a 
+              href="/assets/resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-6 py-3 glass border border-orange-500/20 rounded-2xl flex items-center gap-2 hover:bg-orange-500/10 transition-all font-bold text-sm text-orange-400"
+            >
+              <FaEye size={18} /> View Resume
+            </a>
+            <a 
+              href="/assets/resume.pdf" 
+              download
+              className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl flex items-center gap-2 shadow-lg shadow-orange-500/20 hover:scale-105 transition-all text-sm"
+            >
+              <FaFileDownload size={18} /> Download Resume
             </a>
           </div>
         </div>
