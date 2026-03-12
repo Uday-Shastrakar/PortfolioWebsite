@@ -1,4 +1,5 @@
 import { FaGithub, FaDatabase, FaStream, FaServer, FaBrain, FaChartLine, FaThLarge, FaMicrochip } from "react-icons/fa";
+import strikeiqDash from "../assets/strikeiq-dashboard.png";
 
 const FeaturedProject = () => {
   const arcSteps = [
@@ -34,14 +35,17 @@ const FeaturedProject = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
           {/* Dashboard Preview Area */}
           <div className="lg:col-span-7 group">
-            <div className="glass p-3 rounded-[2.5rem] bg-gradient-to-br from-orange-500/10 to-transparent">
-              <div className="w-full aspect-[16/10] bg-slate-800 rounded-[2rem] overflow-hidden border border-white/5 relative">
+            <div className="glass p-4 rounded-[2.5rem] bg-slate-900/40">
+              <div className="w-full aspect-[16/10] bg-slate-800 rounded-[2rem] overflow-hidden border border-white/5 relative shadow-2xl">
                 <img 
-                  src="/assets/strikeiq-dashboard.png" 
+                  src={strikeiqDash} 
                   alt="StrikeIQ Dashboard" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 shadow-2xl"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
+              <p className="text-center text-slate-500 text-xs mt-4 font-medium italic text-balance">
+                StrikeIQ Real-Time Options Intelligence Dashboard
+              </p>
             </div>
           </div>
 
