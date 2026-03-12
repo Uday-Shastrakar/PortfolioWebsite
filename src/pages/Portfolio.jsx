@@ -52,52 +52,57 @@ Uses Django ORM and templates with a clean responsive UI.`,
   ];
 
   return (
-    <div className="pt-28 pb-16 px-4 bg-gray-50 min-h-screen">
-      <h1 className="text-5xl font-bold text-center underline mb-12 text-gray-900">
-        Portfolio
-      </h1>
+    <section className="pt-32 pb-24 px-4 min-h-screen">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white">
+          My <span className="text-orange-500">Portfolio</span>
+        </h2>
 
-      <div className="max-w-5xl mx-auto space-y-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
-          >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-              <h2 className="text-2xl font-bold text-gray-800">{project.name}</h2>
-              <span className="mt-2 md:mt-0 text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium">
-                {project.type}
-              </span>
-            </div>
-            <p className="text-gray-700 mb-4 whitespace-pre-line leading-relaxed">
-              {project.description}
-            </p>
-
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tech.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="text-sm px-3 py-1 bg-slate-300 rounded-full hover:bg-orange-500 hover:text-white transition"
-                >
-                  {tech}
+        <div className="space-y-12">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="glass p-8 rounded-3xl hover:border-orange-500/30 transition-all duration-500 group"
+            >
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+                <h3 className="text-2xl font-bold text-white group-hover:text-orange-500 transition-colors">
+                  {project.name}
+                </h3>
+                <span className="text-xs font-semibold tracking-wider uppercase px-4 py-1 glass-dark text-orange-400 rounded-full border border-orange-500/20">
+                  {project.type}
                 </span>
-              ))}
-            </div>
+              </div>
+              
+              <p className="text-slate-400 mb-8 whitespace-pre-line leading-loose text-lg">
+                {project.description}
+              </p>
 
-            {project.link !== "#" && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-orange-500 text-white px-4 py-2 text-sm rounded-full shadow hover:bg-orange-600 transition"
-              >
-                View Project
-              </a>
-            )}
-          </div>
-        ))}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {project.tech.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="text-xs px-3 py-1 glass-dark text-slate-400 rounded-lg hover:text-orange-500 transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {project.link !== "#" && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-lg shadow-orange-500/20 hover:scale-105 transition-all"
+                >
+                  View Project
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

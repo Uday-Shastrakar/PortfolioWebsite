@@ -5,84 +5,59 @@ import resumePDF from "../assets/resume.pdf";
 
 const Expertise = () => {
   return (
-    <div className="main-container">
-      <h1 className="my-6 text-center pb-8 text-4xl md:text-5xl underline font-bold">
-        My Expertise
-      </h1>
+    <section className="py-24 px-4 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center">
+          My <span className="text-orange-500">Expertise</span>
+        </h2>
 
-      {/* Section with background image */}
-      <div
-        className="py-12 px-4 text-white"
-        style={{
-          backgroundImage: `url(${bannerBackground})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Left Column */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="w-full md:w-4/5 text-center lg:text-left space-y-5">
-              <h2 className="text-3xl font-bold">I Love These Technologies</h2>
-              <p className="text-gray-200 leading-relaxed">
-                I specialize in backend services using Java, Kotlin, Spring Boot & REST APIs.
-                I also build beautiful, responsive frontends using React, Tailwind CSS & AngularJS.
-                Skilled in Docker, MySQL, Jenkins, Kafka, and AWS Cloud.
-              </p>
+          <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left">
+            <h3 className="text-3xl font-bold text-white">I Love These Technologies</h3>
+            <p className="text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              I specialize in architecting scalable backend services using Java/Kotlin ecosystem 
+              and crafting high-performance user interfaces with modern web standards.
+              My goal is to build software that is both elegant and efficient.
+            </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 justify-center lg:justify-start">
-                {/* Hire Me Button */}
-                <Link
-                  to="/contact"
-                  className="inline-block bg-orange-500 px-5 py-2 text-lg rounded-full shadow hover:bg-orange-600 transition"
-                >
-                  Hire Me
-                </Link>
-
-                {/* Download Resume Button with icon */}
-                <a
-                  href={resumePDF}
-                  download="Uday_Shastrakar_Resume.pdf"
-                  className="inline-flex items-center justify-center bg-gray-100 text-gray-800 px-5 py-2 text-lg rounded-full shadow hover:bg-gray-300 transition"
-                  aria-label="Download Resume"
-                >
-                  Resume <FaDownload className="text-xl ml-2" />
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+              <Link
+                to="/contact"
+                className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-105 transition-all"
+              >
+                Hire Me
+              </Link>
+              <a
+                href={resumePDF}
+                download="Uday_Shastrakar_Resume.pdf"
+                className="inline-flex items-center justify-center gap-3 px-8 py-3 glass text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
+              >
+                Resume <FaDownload />
+              </a>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="flex flex-wrap justify-center gap-3 max-w-2xl">
+          {/* Right Column - Tech Tags */}
+          <div className="w-full lg:w-1/2">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3">
               {[
-                "Core Java",
-                "Kotlin",
-                "J2EE",
-                "Hibernate (ORM Tool)",
-                "Spring Framework",
-                "Spring Boot Framework",
-                "Spring Security",
-                "ReactJs",
-                "Tailwind CSS",
-                "AngularJS",
-                "MySQL",
-                "Docker",
-                "Jenkins",
-                "AWS Cloud",
+                "Core Java", "Kotlin", "Spring Boot", "Spring Security", "Hibernate",
+                "ReactJs", "Vue.js", "Tailwind CSS", "MySQL", "PostgreSQL", 
+                "Docker", "Jenkins", "Kafka", "AWS Cloud", "REST APIs"
               ].map((tech, index) => (
-                <p
+                <span
                   key={index}
-                  className="bg-slate-300 text-gray-900 px-4 py-2 rounded-full text-sm hover:bg-orange-500 hover:text-white transition cursor-pointer"
+                  className="px-5 py-2 glass text-slate-300 rounded-xl text-sm font-medium hover:border-orange-500/50 hover:text-orange-500 transition-all duration-300 cursor-default"
                 >
                   {tech}
-                </p>
+                </span>
               ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

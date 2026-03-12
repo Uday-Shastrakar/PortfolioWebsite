@@ -12,7 +12,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Licensing from "./pages/Licensing";
 import Skills from "./pages/Skills";
 import Portfolio from "./pages/Portfolio";
-import Experience from "./components/Experiance";
+import Experience from "./components/Experience";
 import ServiceDetail from "./pages/ServiceDetail";
 
 function App() {

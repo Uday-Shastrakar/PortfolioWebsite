@@ -20,20 +20,22 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-100 w-full fixed top-0 z-50 shadow">
-      <div className="flex justify-between items-center px-6 md:px-16 h-20">
+    <header className="w-full fixed top-0 z-50 glass-dark border-b border-white/10">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 h-20">
         {/* Brand */}
         <div>
-          <h1 className="text-2xl font-bold">{brandName}</h1>
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+            {brandName}
+          </h1>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6 items-center">
+        <nav className="hidden md:flex space-x-8 items-center">
           {menuLinks.map((link) => (
             <Link
               key={link.id}
               to={link.link}
-              className="hover:text-orange-500 font-medium"
+              className="text-gray-300 hover:text-orange-500 font-medium transition-colors duration-300"
             >
               {link.title}
             </Link>
@@ -42,7 +44,7 @@ const Header = () => {
             href={actionButton.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 bg-orange-500 text-white shadow rounded-full text-sm font-semibold hover:bg-orange-600 transition"
+            className="px-6 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/20 rounded-full text-sm font-semibold hover:scale-105 transition-all duration-300"
           >
             {actionButton.title}
           </a>
@@ -52,7 +54,7 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-2xl"
+            className="text-2xl text-gray-100 p-2 hover:bg-white/10 rounded-lg transition"
           >
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -60,13 +62,13 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-3 bg-gray-100">
+      <div className={`md:hidden absolute w-full glass-dark transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className="px-6 py-8 space-y-6">
           {menuLinks.map((link) => (
             <Link
               key={link.id}
               to={link.link}
-              className="block hover:text-orange-500 text-base font-medium"
+              className="block text-xl text-gray-300 hover:text-orange-500 font-medium transition"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.title}
@@ -76,13 +78,13 @@ const Header = () => {
             href={actionButton.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-2 px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-semibold hover:bg-orange-600 transition"
+            className="block text-center mt-4 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full text-lg font-semibold shadow-lg"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {actionButton.title}
           </a>
         </div>
-      )}
+      </div>
     </header>
   );
 };

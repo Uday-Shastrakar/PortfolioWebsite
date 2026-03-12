@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import bannerImage from "../assets/uday3.jpg";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 
@@ -30,93 +31,77 @@ const Banner = () => {
 
   return (
     <section
-      style={{
-        backgroundImage: `url(${bannerBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="text-white w-full px-4 md:px-10 pt-20 md:pt-28 pb-16 min-h-screen flex items-center"
+      className="relative text-white w-full px-4 md:px-10 pt-20 md:pt-32 pb-20 min-h-screen flex items-center overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
-        {/* Left Content with limited overlay */}
-        <div className="relative text-center md:text-left p-4 rounded-xl">
-          {/* Overlay only behind text */}
-          <div className="absolute inset-0 bg-black/20 rounded-xl md:bg-transparent z-0"></div>
+      {/* Background with overlay */}
+      <div 
+        className="absolute inset-0 opacity-40 z-0"
+        style={{
+          backgroundImage: `url(${bannerBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-slate-900 to-slate-900 z-0"></div>
 
-          {/* Text content above overlay */}
-          <div className="relative z-10 space-y-4">
-            <h3 className="text-2xl md:text-3xl font-semibold">Hi, I am</h3>
-            <h1 className="text-4xl md:text-5xl font-bold">Uday Shastrakar</h1>
-            <h2 className="text-2xl md:text-3xl">
-              I am a <span className="font-bold underline" ref={el}></span>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full relative z-10">
+        {/* Left Content */}
+        <div className="text-center md:text-left space-y-8 animate-fade-in-up">
+          <div className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-medium text-orange-400">Hi, I am</h3>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              Uday <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">Shastrakar</span>
+            </h1>
+            <h2 className="text-2xl md:text-4xl font-light text-slate-300">
+              I am a <span className="font-bold text-white border-b-2 border-orange-500" ref={el}></span>
             </h2>
-            <p className="text-sm md:text-base leading-relaxed text-gray-200">
-              I have hands-on experience in building responsive web applications
-              using <strong>React</strong>, <strong>Vue.js</strong>,{" "}
-              <strong>JavaScript</strong>, and <strong>Tailwind CSS</strong>. I
-              also develop scalable backend services with <strong>Java</strong>,{" "}
-              <strong>Kotlin</strong>, <strong>Spring Boot</strong>, and{" "}
-              <strong>REST APIs</strong>. Skilled in <strong>Docker</strong>,{" "}
-              <strong>Kafka</strong>, <strong>Jenkins</strong>, and{" "}
-              <strong>MySQL</strong> optimization, I’ve contributed to impactful
-              projects at <strong>Atlas Primary</strong> and{" "}
-              <strong>Velotech Solutions</strong>. I hold a{" "}
-              <strong>BCA</strong> from <strong>Gondwana University</strong> and
-              certifications in <strong>Full Stack Development</strong> and{" "}
-              <strong>Microservices</strong>.
+            <p className="text-lg md:text-xl leading-relaxed text-slate-400 max-w-xl mx-auto md:mx-0">
+              Passionate full-stack developer specializing in scalable backend systems and high-performance frontend interfaces. 
+              Bridging the gap between robust logic and intuitive design.
             </p>
+          </div>
 
-            {/* Social Icons */}
-            <div className="flex justify-center md:justify-start space-x-4 mt-4">
+          {/* Social Icons */}
+          <div className="flex justify-center md:justify-start gap-4">
+            {[
+              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/uday-shastrakar", color: "hover:bg-[#0077b5]" },
+              { icon: <FaGithub />, url: "https://github.com/Uday-Shastrakar", color: "hover:bg-[#333]" },
+              { icon: <FaInstagram />, url: "https://www.instagram.com/uday_shastrakar/", color: "hover:bg-[#e4405f]" },
+            ].map((social, i) => (
               <a
-                href="https://www.linkedin.com/in/uday-shastrakar"
+                key={i}
+                href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="hover:bg-orange-500 cursor-pointer rounded-full w-12 h-12 flex justify-center items-center bg-gray-700 transition"
+                className={`w-12 h-12 flex justify-center items-center rounded-2xl glass transition-all duration-300 transform hover:-translate-y-2 text-2xl ${social.color}`}
               >
-                <i className="fa-brands fa-linkedin text-2xl"></i>
+                {social.icon}
               </a>
-              <a
-                href="https://github.com/Uday-Shastrakar"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="hover:bg-orange-500 cursor-pointer rounded-full w-12 h-12 flex justify-center items-center bg-gray-700 transition"
-              >
-                <i className="fa-brands fa-github text-2xl"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/uday_shastrakar/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="hover:bg-orange-500 cursor-pointer rounded-full w-12 h-12 flex justify-center items-center bg-gray-700 transition"
-              >
-                <i className="fa-brands fa-instagram text-2xl"></i>
-              </a>
-            </div>
+            ))}
+          </div>
 
-            {/* Contact Button */}
-            <div className="mt-6">
-              <Link
-                to="/contact"
-                className="inline-block text-lg px-6 py-2 bg-orange-500 rounded-full shadow-lg hover:bg-orange-600 transition"
-              >
-                Contact Me
-              </Link>
-            </div>
+          {/* Contact Button */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-6">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl font-bold shadow-xl shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all"
+            >
+              Get In Touch
+            </Link>
           </div>
         </div>
 
-        {/* Right Content */}
-        <div className="flex justify-center">
-          <img
-            src={bannerImage}
-            alt="Uday Shastrakar"
-            className="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover shadow-lg"
-          />
+        {/* Right Content - Profile Image */}
+        <div className="flex justify-center relative">
+          <div className="absolute inset-0 bg-orange-500/20 blur-[100px] rounded-full animate-pulse"></div>
+          <div className="relative p-2 glass rounded-full animate-float">
+            <img
+              src={bannerImage}
+              alt="Uday Shastrakar"
+              className="rounded-full w-72 h-72 md:w-[450px] md:h-[450px] object-cover border-4 border-white/10"
+            />
+          </div>
         </div>
       </div>
     </section>
