@@ -1,0 +1,5 @@
+commit 2276171071ba03025774b58915b8f0a1518bd6ef
+Author: Uday Shastrakar <uday.shastrakar@gmail.com>
+Date:   Thu Mar 12 20:28:34 2026 +0530
+
+    Upgrade UI to premium dark theme with glassmorphism and fix bugs

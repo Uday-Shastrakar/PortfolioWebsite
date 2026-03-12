@@ -5,9 +5,9 @@ import bannerImage from '../assets/uday2.png';
 const About = () => {
   const [data] = useState({
     image: bannerImage,
-    title: "Full Stack Developer | Java, Spring Boot, React, Python",
-    desc1: `I have hands-on experience in building responsive web applications using React, Vue.js, JavaScript, and Tailwind CSS. I also develop scalable backend services with Java, Kotlin, Spring Boot, and REST APIs.`,
-    desc2: `Skilled in Docker, Kafka, Jenkins, and MySQL optimization, I’ve contributed to impactful projects at Atlas Primary and Velotech Solutions. I hold a BCA from Gondwana University and certifications in Full Stack Development and Microservices.`,
+    title: "Backend Engineer | Java • Spring Boot • Microservices • FastAPI",
+    desc1: `I am a Software Developer focused on backend engineering and real-time systems. I primarily work with Java, Spring Boot, and microservice architectures.`,
+    desc2: `I enjoy understanding how systems work internally, including dependency injection, database transaction flows, and performance optimization. Recently I have been building StrikeIQ, a real-time options analytics platform.`,
     actionButton: {
       title: "Read More..",
       link: "/about",

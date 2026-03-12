@@ -7,14 +7,14 @@ const Experience = () => {
         </h2>
 
         <div className="space-y-12">
-          {/* Atlas Primary */}
+          {/* Manifest Health */}
           <div className="glass p-8 rounded-3xl hover:border-orange-500/30 transition-all duration-500 group">
             <div className="flex flex-wrap justify-between items-start gap-4 mb-6">
               <div>
                 <h3 className="text-2xl font-bold text-white group-hover:text-orange-500 transition-colors">
-                  Junior Software Engineer
+                  Software Developer
                 </h3>
-                <p className="text-orange-500 font-medium mt-1">Atlas Primary</p>
+                <p className="text-orange-500 font-medium mt-1">Manifest Health (Atlas Primary)</p>
               </div>
               <span className="px-4 py-1 glass-dark rounded-full text-sm text-slate-400">
                 Jun 2023 – Mar 2024
@@ -23,12 +23,11 @@ const Experience = () => {
             
             <ul className="space-y-3 text-slate-400 mb-8 list-none">
               {[
-                "Built microservices with Java, Kotlin, and Spring Boot for survey data workflows.",
-                "Developed and tested REST APIs using JUnit, Postman, and design patterns.",
-                "Applied MySQL optimization and schema versioning with Liquibase & Flyway.",
-                "Created frontend dashboards using Vue.js for admin and reporting interfaces.",
-                "Handled CI/CD with Jenkins, and containerization with Docker.",
-                "Managed tasks and code using Jira, Bitbucket, and Confluence."
+                "Developed REST APIs using Spring Boot for healthcare survey data collection.",
+                "Designed and optimized database schemas in MySQL and MongoDB.",
+                "Implemented complex backend services for high-performance data processing.",
+                "Streamlined development workflows with Docker and Jenkins CI/CD pipelines.",
+                "Collaborated in an agile environment to deliver research-study platform features."
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-orange-500 mt-1.5">•</span>
@@ -40,7 +39,7 @@ const Experience = () => {
             <div className="pt-6 border-t border-white/5">
               <p className="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wider">Tech Stack</p>
               <div className="flex flex-wrap gap-2">
-                {["Java", "Kotlin", "Spring Boot", "MySQL", "Docker", "Jenkins", "Vue.js", "AWS"].map((tech) => (
+                {["Java", "Spring Boot", "MySQL", "MongoDB", "Docker", "Jenkins"].map((tech) => (
                   <span key={tech} className="px-3 py-1 glass-dark rounded-lg text-xs text-slate-400">
                     {tech}
                   </span>

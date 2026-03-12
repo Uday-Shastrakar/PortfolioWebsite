@@ -1,48 +1,58 @@
 const AboutPage = () => {
   return (
-    <div className="pt-24 pb-16 px-4 bg-gray-50 min-h-screen">
-      <div className="bg-white shadow-lg rounded-xl max-w-5xl mx-auto p-8 md:p-12 border border-orange-200">
-        <h1 className="text-4xl md:text-5xl font-bold mb-10 underline text-center text-gray-900">
-          About Me
-        </h1>
+    <div className="pt-32 pb-24 px-4 min-h-screen">
+      <div className="glass max-w-5xl mx-auto p-8 md:p-16 rounded-3xl">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+          About <span className="text-orange-500">Me</span>
+        </h2>
 
-        <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <div className="space-y-8 text-lg text-slate-300 leading-loose">
           <p>
-            Hello! I'm <strong>Uday Shastrakar</strong>, a passionate software engineer from Pune with over 1 year of hands-on experience in full-stack development. I love building efficient systems, solving real-world problems through clean code, and constantly learning emerging technologies.
+            Hello! I'm <strong className="text-white">Uday Shastrakar</strong>, a Software Developer focused on backend engineering and real-time systems. I enjoy understanding how systems work internally, including dependency injection, database transaction flows, and performance optimization.
           </p>
 
           <p>
-            I specialize in backend development using <strong>Java</strong>, <strong>Kotlin</strong>, <strong>Spring Boot</strong>, and <strong>REST APIs</strong>. I'm equally comfortable with frontend technologies like <strong>React.js</strong>, <strong>Vue.js</strong>, <strong>AngularJS</strong>, <strong>ExtJS</strong>, and <strong>Tailwind CSS</strong>.
+            I primarily work with <strong className="text-orange-500">Java</strong>, <strong className="text-orange-500">Spring Boot</strong>, and microservice architectures. Recently, I've expanded my expertise into <strong className="text-orange-500">FastAPI</strong> and real-time streaming applications.
           </p>
+
+          <div className="glass-dark p-8 rounded-2xl border-l-4 border-orange-500 my-10">
+            <h3 className="text-xl font-bold text-white mb-4">Current Focus: StrikeIQ</h3>
+            <p className="text-slate-400">
+              I have been building StrikeIQ, a real-time options analytics platform that processes market data streams 
+              and provides actionable trading insights using WebSockets and interactive visualizations.
+            </p>
+          </div>
 
           <p>
-            My experience also includes working with <strong>Docker</strong>, <strong>Kubernetes</strong>, <strong>Kafka</strong>, <strong>Jenkins</strong>, and optimizing <strong>MySQL</strong> databases.
+            With experience at <strong className="text-white">Manifest Health (Atlas Primary)</strong> and <strong className="text-white">Velotech Solutions</strong>, I have developed a strong foundation in building scalable REST APIs, designing optimized database schemas (MySQL, MongoDB), and implementing CI/CD pipelines with Docker and Jenkins.
           </p>
 
-          <p>
-            I’ve contributed to impactful projects at <strong>Atlas Primary</strong> and <strong>Velotech Solutions</strong>, building healthcare data platforms and exam portals. My role included building microservices, writing efficient SQL queries, implementing CI/CD, and collaborating across agile teams.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Core Competencies</h3>
+              <ul className="space-y-3">
+                {["Backend Systems Architecture", "Microservices Design", "Real-time Data Streaming", "Database Optimization", "CI/CD Implementation"].map((skill) => (
+                  <li key={skill} className="flex items-center gap-3 text-slate-400">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Education & Training</h3>
+              <ul className="space-y-3">
+                <li className="text-slate-400">BCA - Gondwana University</li>
+                <li className="text-slate-400">Java Full Stack Development - Seed Infotech</li>
+                <li className="text-slate-400">Microservices Masterclass - Udemy</li>
+              </ul>
+            </div>
+          </div>
 
-          <p>
-            I hold a <strong>BCA</strong> from <strong>Gondwana University</strong> and have completed multiple certifications:
-          </p>
-
-          <ul className="list-disc list-inside ml-4 text-base">
-            <li>Java Full Stack Web Development – Seed Infotech</li>
-            <li>Master Microservices with Spring, Docker, and Kubernetes – Udemy</li>
-            <li>Python & Django Full Stack Developer Bootcamp – Udemy</li>
-          </ul>
-
-          <p>
-            I'm also proficient with tools like <strong>Git</strong>, <strong>Bitbucket</strong>, <strong>Confluence</strong>, <strong>Postman</strong>, <strong>Swagger</strong>, and testing tools like <strong>JUnit</strong>, <strong>Cucumber</strong>, and <strong>Spock</strong>.
-          </p>
-
-          <p>
-            Soft skills that define me: problem-solving mindset, effective communication, and collaborative spirit in agile teams.
-          </p>
-
-          <p className="text-center text-orange-600 font-medium italic mt-8">
-            "Thank you for visiting my portfolio! Feel free to <a href="/PortfolioWebsite/contact" className="underline hover:text-orange-700">get in touch</a> — I'm always open to exciting opportunities."
+          <p className="text-center pt-10">
+            <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-105 transition-all">
+              Let's build something together
+            </a>
           </p>
         </div>
       </div>

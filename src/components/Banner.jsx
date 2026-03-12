@@ -11,11 +11,11 @@ const Banner = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
+        "Backend Engineer",
         "Java Developer",
-        "Backend Developer",
-        "Kotlin Developer",
-        "Frontend Developer",
-        "Python Developer",
+        "Spring Boot Expert",
+        "Real-time Systems",
+        "FastAPI Developer",
       ],
       startDelay: 300,
       typeSpeed: 70,
@@ -50,15 +50,15 @@ const Banner = () => {
         <div className="text-center md:text-left space-y-8 animate-fade-in-up">
           <div className="space-y-4">
             <h3 className="text-xl md:text-2xl font-medium text-orange-400">Hi, I am</h3>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
               Uday <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">Shastrakar</span>
             </h1>
             <h2 className="text-2xl md:text-4xl font-light text-slate-300">
-              I am a <span className="font-bold text-white border-b-2 border-orange-500" ref={el}></span>
+              <span className="font-bold text-white border-b-2 border-orange-500" ref={el}></span>
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-slate-400 max-w-xl mx-auto md:mx-0">
-              Passionate full-stack developer specializing in scalable backend systems and high-performance frontend interfaces. 
-              Bridging the gap between robust logic and intuitive design.
+              Building scalable backend systems and real-time applications. 
+              Specializing in cloud-native architectures and high-performance data processing.
             </p>
           </div>
 
