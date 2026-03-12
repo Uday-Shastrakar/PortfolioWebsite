@@ -91,25 +91,34 @@ const FeaturedProject = () => {
           <div className="flex lg:grid lg:grid-cols-7 gap-6 min-w-[800px] lg:min-w-0 relative">
             {arcSteps.map((step, idx) => (
               <div key={idx} className="flex-1 flex flex-col items-center group relative">
-                {/* Connector Arrow (pulsing) */}
+                {/* Bi-directional Streaming Arrows */}
                 {idx > 0 && (
-                  <div 
-                    className={`absolute -left-3 top-[24px] text-lg animate-arrow-flow font-bold ${idx % 2 === 0 ? 'text-green-400' : 'text-red-400'}`}
-                    style={{ animationDelay: `${(idx - 1) * 0.4}s` }}
-                  >
-                    →
+                  <div className="absolute -left-5 top-[22px] flex flex-col gap-0.5 items-center z-20">
+                    <div 
+                      className="text-[12px] text-green-400 animate-arrow-flow font-bold drop-shadow-[0_0_5px_rgba(74,222,128,0.5)]"
+                      style={{ animationDelay: `${(idx - 1) * 0.5}s` }}
+                    >
+                      →
+                    </div>
+                    <div 
+                      className="text-[12px] text-red-400 animate-arrow-flow-reverse font-bold drop-shadow-[0_0_5px_rgba(248,113,113,0.5)]"
+                      style={{ animationDelay: `${(idx - 1) * 0.5 + 0.25}s` }}
+                    >
+                      ←
+                    </div>
                   </div>
                 )}
                 
                 <div 
-                  className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-lg text-orange-500 mb-4 group-hover:text-white transition-all shadow-lg shadow-orange-500/5 animate-pulse-neon hover-orange-glow cursor-pointer"
-                  style={{ animationDelay: `${idx * 0.4}s` }}
+                  className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-lg text-orange-500 mb-4 group-hover:text-white transition-all shadow-lg animate-pulse-bright cursor-pointer z-10"
+                  style={{ animationDelay: `${idx * 0.5}s` }}
                 >
-                  {step.icon}
+                  <div className="text-glow group-hover:scale-110 transition-transform">
+                    {step.icon}
+                  </div>
                 </div>
                 <p 
                   className="text-slate-400 text-[9px] font-bold uppercase tracking-widest text-center whitespace-nowrap group-hover:text-white transition-colors"
-                  style={{ transitionDelay: `${idx * 0.1}s` }}
                 >
                   {step.name}
                 </p>

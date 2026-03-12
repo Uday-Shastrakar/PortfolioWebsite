@@ -94,10 +94,30 @@
   text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
 }
 
-.hover-orange-glow:hover {
-  box-shadow: 0 0 25px rgba(249, 115, 22, 0.8) !important;
-  border-color: rgba(249, 115, 22, 0.9) !important;
-  background-color: rgba(249, 115, 22, 0.1) !important;
+@keyframes arrow-flow-reverse {
+  0% { transform: translateX(8px); opacity: 0.2; }
+  50% { transform: translateX(-8px); opacity: 1; filter: drop-shadow(0 0 8px currentColor); }
+  100% { transform: translateX(8px); opacity: 0.2; }
+}
+
+@keyframes pulse-bright-orange {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(249, 115, 22, 0.1);
+    background: transparent;
+  }
+  50% { 
+    box-shadow: 0 0 35px rgba(249, 115, 22, 0.9);
+    background: rgba(249, 115, 22, 0.2);
+    border-color: rgba(249, 115, 22, 1);
+  }
+}
+
+.animate-arrow-flow-reverse {
+  animation: arrow-flow-reverse 1.5s infinite ease-in-out;
+}
+
+.animate-pulse-bright {
+  animation: pulse-bright-orange 3s infinite ease-in-out;
 }
 
 
