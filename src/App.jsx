@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
@@ -18,11 +18,9 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./pages/Contact";
 
 function App() {
-  const basename = import.meta.env.DEV ? "/" : "/PortfolioWebsite";
-
   return (
     <div className="flex flex-col min-h-screen">
-      <Router basename={basename}>
+      <Router>
         <Header />
         
         <main className="flex-grow">
