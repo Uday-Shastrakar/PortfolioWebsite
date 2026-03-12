@@ -19,7 +19,7 @@ const FeaturedProject = () => {
           <div>
             <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-4">Featured Project</h2>
             <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              StrikeIQ — <span className="text-orange-500">AI-Powered</span> Real-Time Options Intelligence Platform
+              StrikeIQ — <span className="text-orange-500 text-glow">AI-Powered</span> Real-Time Options Intelligence Platform
             </h3>
           </div>
           <a 
@@ -91,15 +91,28 @@ const FeaturedProject = () => {
           <div className="flex lg:grid lg:grid-cols-7 gap-6 min-w-[800px] lg:min-w-0 relative">
             {arcSteps.map((step, idx) => (
               <div key={idx} className="flex-1 flex flex-col items-center group relative">
-                <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-lg text-orange-500 mb-4 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all shadow-lg shadow-orange-500/5">
-                  {step.icon}
-                </div>
-                <p className="text-slate-400 text-[9px] font-bold uppercase tracking-widest text-center whitespace-nowrap">{step.name}</p>
-                {idx < arcSteps.length - 1 && (
-                  <div className="absolute top-[24px] -right-4 text-orange-500/20">
+                {/* Connector Arrow (pulsing) */}
+                {idx > 0 && (
+                  <div 
+                    className="absolute -left-3 top-[24px] text-orange-500/40 text-lg animate-arrow-flow"
+                    style={{ animationDelay: `${(idx - 1) * 0.4}s` }}
+                  >
                     →
                   </div>
                 )}
+                
+                <div 
+                  className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-lg text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all shadow-lg shadow-orange-500/5 animate-pulse-neon"
+                  style={{ animationDelay: `${idx * 0.4}s` }}
+                >
+                  {step.icon}
+                </div>
+                <p 
+                  className="text-slate-400 text-[9px] font-bold uppercase tracking-widest text-center whitespace-nowrap group-hover:text-white transition-colors"
+                  style={{ transitionDelay: `${idx * 0.1}s` }}
+                >
+                  {step.name}
+                </p>
               </div>
             ))}
           </div>
