@@ -67,30 +67,37 @@
 
 @keyframes pulse-neon {
   0%, 100% { 
-    box-shadow: 0 0 5px rgba(249, 115, 22, 0.2);
-    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(249, 115, 22, 0.1);
+    border-color: rgba(255, 255, 255, 0.05);
   }
   50% { 
-    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
-    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+    border-color: rgba(249, 115, 22, 0.6);
   }
 }
 
 @keyframes arrow-flow {
-  0% { transform: translateX(-5px); opacity: 0.2; }
-  50% { transform: translateX(5px); opacity: 1; }
-  100% { transform: translateX(-5px); opacity: 0.2; }
+  0% { transform: translateX(-8px); opacity: 0.2; }
+  50% { transform: translateX(8px); opacity: 1; filter: drop-shadow(0 0 8px currentColor); }
+  100% { transform: translateX(-8px); opacity: 0.2; }
 }
 
 .animate-pulse-neon {
-  animation: pulse-neon 3s infinite ease-in-out;
+  animation: pulse-neon 4s infinite ease-in-out;
 }
 
 .animate-arrow-flow {
-  animation: arrow-flow 2s infinite ease-in-out;
+  animation: arrow-flow 1.5s infinite ease-in-out;
 }
 
 .text-glow {
   text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
 }
+
+.hover-orange-glow:hover {
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.8) !important;
+  border-color: rgba(249, 115, 22, 0.9) !important;
+  background-color: rgba(249, 115, 22, 0.1) !important;
+}
+
 

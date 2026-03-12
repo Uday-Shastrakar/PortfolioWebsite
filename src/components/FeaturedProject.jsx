@@ -36,11 +36,11 @@ const FeaturedProject = () => {
           {/* Dashboard Preview Area */}
           <div className="lg:col-span-7 group">
             <div className="glass p-4 rounded-[2.5rem] bg-slate-900/40">
-              <div className="w-full aspect-[16/10] bg-slate-800 rounded-[2rem] overflow-hidden border border-white/5 relative shadow-2xl">
+              <div className="w-full aspect-[16/10] bg-slate-900 rounded-[2rem] overflow-hidden border border-white/5 relative shadow-2xl flex items-center justify-center">
                 <img 
                   src={strikeiqDash} 
                   alt="StrikeIQ Dashboard" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <p className="text-center text-slate-500 text-xs mt-4 font-medium italic text-balance">
@@ -94,7 +94,7 @@ const FeaturedProject = () => {
                 {/* Connector Arrow (pulsing) */}
                 {idx > 0 && (
                   <div 
-                    className="absolute -left-3 top-[24px] text-orange-500/40 text-lg animate-arrow-flow"
+                    className={`absolute -left-3 top-[24px] text-lg animate-arrow-flow font-bold ${idx % 2 === 0 ? 'text-green-400' : 'text-red-400'}`}
                     style={{ animationDelay: `${(idx - 1) * 0.4}s` }}
                   >
                     →
@@ -102,7 +102,7 @@ const FeaturedProject = () => {
                 )}
                 
                 <div 
-                  className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-lg text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all shadow-lg shadow-orange-500/5 animate-pulse-neon"
+                  className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-lg text-orange-500 mb-4 group-hover:text-white transition-all shadow-lg shadow-orange-500/5 animate-pulse-neon hover-orange-glow cursor-pointer"
                   style={{ animationDelay: `${idx * 0.4}s` }}
                 >
                   {step.icon}
