@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AboutPage = () => {
   return (
     <div className="pt-32 pb-24 px-4 min-h-screen">
@@ -16,9 +18,9 @@ const AboutPage = () => {
           </p>
 
           <div className="glass-dark p-8 rounded-2xl border-l-4 border-orange-500 my-10">
-            <h3 className="text-xl font-bold text-white mb-4">Current Focus: StrikeIQ</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Current Focus: Options Intelligence Platform</h3>
             <p className="text-slate-400">
-              I have been building StrikeIQ, a real-time options analytics platform that processes market data streams 
+              I have been building a real-time options analytics platform that processes market data streams 
               and provides actionable trading insights using WebSockets and interactive visualizations.
             </p>
           </div>
@@ -50,9 +52,9 @@ const AboutPage = () => {
           </div>
 
           <p className="text-center pt-10">
-            <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-105 transition-all">
+            <Link to="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-105 transition-all">
               Let's build something together
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { FaDatabase, FaStream, FaServer, FaBrain, FaChartLine, FaLayout } from "react-icons/fa";
+import ScrollReveal from "./utils/ScrollReveal";
 
 const ArchitectureSection = () => {
   const steps = [
@@ -13,9 +14,11 @@ const ArchitectureSection = () => {
   return (
     <section className="py-24 px-4 bg-slate-900/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-20 text-center">
-          System <span className="text-orange-500">Architecture</span> (StrikeIQ)
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-20 text-center">
+            System <span className="text-orange-500">Architecture</span>
+          </h2>
+        </ScrollReveal>
 
         <div className="relative">
           {/* Connector Line (visible on large screens) */}

@@ -17,9 +17,12 @@ import FeaturedProject from "./components/FeaturedProject";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./pages/Contact";
 
+import GrainyOverlay from "./components/utils/GrainyOverlay";
+
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative overflow-hidden">
+      <GrainyOverlay />
       <Router>
         <Header />
         

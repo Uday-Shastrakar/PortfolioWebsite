@@ -1,8 +1,8 @@
 const Portfolio = () => {
   const projects = [
     {
-      name: "StrikeIQ",
-      description: `StrikeIQ is a real-time options analytics platform that processes live market data and provides insights for options trading.
+      name: "Options Intelligence Platform",
+      description: `This is a real-time options analytics platform that processes live market data and provides insights for options trading.
 Key Features:
 - Real-time market data streaming using WebSockets.
 - Professional option chain analysis & strike intelligence.

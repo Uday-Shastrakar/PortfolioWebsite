@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaCode, FaLaptopCode, FaCubes, FaDocker, FaDatabase, FaCloud } from "react-icons/fa";
+import ScrollReveal from "./utils/ScrollReveal";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -78,9 +79,11 @@ const Services = () => {
   return (
     <section className="py-24 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-          What I <span className="text-orange-500">Provide</span>
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
+            What I <span className="text-orange-500">Provide</span>
+          </h2>
+        </ScrollReveal>
 
         <div className="relative px-8">
           <Swiper

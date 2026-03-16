@@ -1,5 +1,6 @@
 import { FaGithub, FaDatabase, FaStream, FaServer, FaBrain, FaChartLine, FaThLarge, FaMicrochip } from "react-icons/fa";
-import strikeiqDash from "../assets/strikeiq-dashboard.png";
+import ScrollReveal from "./utils/ScrollReveal";
+import dashboardImage from "../assets/dashboard.png";
 
 const FeaturedProject = () => {
   const arcSteps = [
@@ -17,10 +18,12 @@ const FeaturedProject = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
+          <ScrollReveal>
             <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-4">Featured Project</h2>
             <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              StrikeIQ — <span className="text-orange-500 text-glow">AI-Powered</span> Real-Time Options Intelligence Platform
+              AI-Powered <span className="text-orange-500 text-glow">Real-Time Options Intelligence</span> Platform
             </h3>
+          </ScrollReveal>
           </div>
           <a 
             href="https://github.com/Uday-Shastrakar" 
@@ -35,25 +38,29 @@ const FeaturedProject = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
           {/* Dashboard Preview Area */}
           <div className="lg:col-span-7 group">
+          <ScrollReveal direction="right" width="100%">
             <div className="glass p-4 rounded-[2.5rem] bg-slate-900/40">
-              <div className="w-full aspect-[16/10] bg-slate-900 rounded-[2rem] overflow-hidden border border-white/5 relative shadow-2xl flex items-center justify-center">
-                <img 
-                  src={strikeiqDash} 
-                  alt="StrikeIQ Dashboard" 
-                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                />
+              <div className="w-full aspect-[16/10] bg-slate-900 rounded-[2rem] overflow-hidden border border-white/5 relative shadow-2xl flex flex-col group">
+                <div className="flex-1 overflow-y-auto scrollbar-hide custom-scrollbar">
+                  <img 
+                    src={dashboardImage} 
+                    alt="Options Intelligence Dashboard" 
+                    className="w-full h-auto object-top transition-transform duration-700"
+                  />
+                </div>
               </div>
               <p className="text-center text-slate-500 text-xs mt-4 font-medium italic text-balance">
-                StrikeIQ Real-Time Options Intelligence Dashboard
+                Pro Tip: Scroll inside the frame to view the full platform
               </p>
             </div>
+          </ScrollReveal>
           </div>
 
           {/* Features & Details */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-8">
             <div className="space-y-4">
               <p className="text-lg text-slate-300 leading-relaxed">
-                StrikeIQ is a real-time options analytics platform that integrates with <strong>live broker market data feeds</strong> to analyze option chain activity and generate trading insights.
+                This real-time options analytics platform integrates with <strong>live broker market data feeds</strong> to analyze option chain activity and generate trading insights.
               </p>
               <p className="text-lg text-slate-400 leading-relaxed border-l-2 border-orange-500/30 pl-4">
                 The system processes live market data streams using WebSockets, performs option chain analytics, and applies AI/ML models to detect trading patterns and generate intelligent signals.

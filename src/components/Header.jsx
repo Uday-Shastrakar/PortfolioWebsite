@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import Magnetic from "./utils/Magnetic";
 
 const Header = () => {
   const [brandName] = useState("Uday Shastrakar");
@@ -23,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="hidden md:block w-full fixed top-0 z-50 glass-dark border-b border-white/10">
+      <header className="hidden md:block w-full fixed top-0 z-50 glass border-b border-white/5 shadow-2xl">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 h-20">
         {/* Brand */}
         <div>
@@ -38,21 +40,30 @@ const Header = () => {
             <Link
               key={link.id}
               to={link.link}
-              className={`font-medium transition-colors duration-300 ${
-                location.pathname === link.link ? 'text-orange-500' : 'text-gray-300 hover:text-orange-500'
+              className={`relative font-medium transition-colors duration-300 px-2 py-1 ${
+                location.pathname === link.link ? 'text-orange-500' : 'text-gray-400 hover:text-white'
               }`}
             >
               {link.title}
+              {location.pathname === link.link && (
+                <motion.div
+                  layoutId="nav-underline"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.8)]"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
             </Link>
           ))}
-          <a
-            href={actionButton.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/20 rounded-full text-sm font-semibold hover:scale-105 transition-all duration-300"
-          >
-            {actionButton.title}
-          </a>
+          <Magnetic>
+            <a
+              href={actionButton.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/20 rounded-full text-sm font-semibold hover:scale-105 transition-all duration-300"
+            >
+              {actionButton.title}
+            </a>
+          </Magnetic>
         </nav>
       </div>
     </header>
