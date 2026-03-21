@@ -92,7 +92,7 @@ const Banner = () => {
             </Magnetic>
             <Magnetic>
               <a 
-                href="https://rxresu.me/uday.shastrakar/uday-shastrakar-java-profile" 
+                href="https://rxresu.me/uday.shastrakar/uday-shastrakar" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-6 py-3 glass border border-orange-500/20 rounded-2xl flex items-center gap-2 hover:bg-orange-500/10 transition-all font-bold text-sm text-orange-400"
